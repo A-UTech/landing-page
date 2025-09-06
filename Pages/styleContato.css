@@ -1,0 +1,111 @@
+body {
+    padding: 0;
+    top: 0;
+    margin: 0;
+    background-color: #2F3034;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#contato {
+    background-color: #fcfcfc;
+    border-radius: 0px 100px 100px 0px;
+    height: 669px;
+    padding: 30px;
+}
+#bemVindo {
+    margin: 0;
+    margin-bottom: 40px;
+}
+#contato > h1 {
+    text-align: center;
+}
+#apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+h1 {
+    font-family: "Anton";
+    font-size: 50px;
+    text-decoration: none;
+    margin: 0;
+    font-weight: 200;
+}
+#ola {
+    font-size: 80px;
+}
+#ola, h3 {
+    line-height: 1;
+}
+#emailAU {
+    margin-bottom: 25px;
+}
+p {
+    margin: 0;
+    line-height: 1;
+}
+#dados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;                
+    justify-content: center;  
+    align-items: center;      
+    padding-top: 60px;
+}
+input, #userSubmit {
+    width: 279px;
+    height: 65px;
+    border-radius: 15px;
+    border: solid 2px #1A7B66;
+}
+input::placeholder {
+    opacity: 0.6;
+    font-size: 15px;
+}
+input:focus::placeholder {
+    top: 100px;
+    transition: 0.5s;
+    color: #1A7B66;
+    opacity: 1;
+}
+#userSubmit {
+    background-color: #1A7B66;
+}
+#textos, #userSubmit {
+    color: #fcfcfc;
+}
+#textos {
+    margin: 230px auto;
+    text-align: center;
+}
+#userMensagem {
+    height: 200px;
+}
+#voltar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+#bVoltar {
+    width: 15px;
+    height: 15px;
+    padding-right: 2px;
+}
+h3, p, input, button, label {
+    font-family: "Poppins";
+}
+h3, p {
+    font-weight: 100;
+    font-size: 25px;
+}
+input, button {
+    font-weight: 400;
+}
+h1 {
+    letter-spacing: 3px;
+}
+button {
+    font-size: 18px;
+}
