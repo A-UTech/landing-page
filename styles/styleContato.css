@@ -15,10 +15,9 @@ main {
 #contato {
     background-color: #fcfcfc;
     border-radius: 0px 100px 100px 0px;
-    height: 91.8vh;
+    height: 91.8dvh;
     padding: 30px;
     transition: 0.7s;
-
 }
 #bemVindo {
     margin: 0;
@@ -137,6 +136,12 @@ button {
 #celular {
     display: none;
 }
+#userEmail:valid {
+    color: #1A7B66;
+}
+#userEmail:invalid {
+    color: #ff2f00;
+}
 @media (max-width: 800px) {
     main {
         display: flex;
@@ -158,7 +163,7 @@ button {
     #contato {
         background-color: #fcfcfc;
         border-radius: 100px 100px 0px 0px;
-        height: 100vh;
+        height: 100dvh;
         padding-top: 30px;
     }
     #apresentacao {
@@ -191,21 +196,21 @@ button {
 }
 @keyframes aparicaoText {
     from {
-        margin: 37vh;
+        margin: 37dvh;
         opacity: 0;
     }
     to {
-        margin: 31.5vh auto;
+        margin: 31.5dvh auto;
         opacity: 1;
     }
 }
 @keyframes aparicaoTextMob {
     from {
-        margin: 4vh;
+        margin: 4dvh;
         opacity: 0;
     }
     to {
-        margin: 0.8vh auto;
+        margin: 0.8dvh auto;
         opacity: 1;
     }
 }
