@@ -3,6 +3,10 @@ body, html {
     top: 0;
     margin: 0;
     background-color: #2F3034;
+    overflow: hidden;
+}
+html::-webkit-scrollbar {
+    display: none;
 }
 main {
     display: grid;
@@ -11,15 +15,20 @@ main {
 #contato {
     background-color: #fcfcfc;
     border-radius: 0px 100px 100px 0px;
-    height: 95%;
+    height: 91.8vh;
     padding: 30px;
+    transition: 0.7s;
+
 }
 #bemVindo {
     margin: 0;
     margin-bottom: 40px;
+    line-height: 1.4cap;
 }
 #contato > h1 {
     text-align: center;
+    color: #2F3034;
+    animation: aparicaoCont 1.3s ease;
 }
 #apresentacao {
     display: flex;
@@ -53,6 +62,7 @@ p {
     justify-content: center;  
     align-items: center;      
     padding-top: 60px;
+    animation: aparicaoCont 1.3s ease;
 }
 input, #userSubmit, textarea {
     width: 279px;
@@ -72,7 +82,6 @@ input::placeholder {
 textarea::placeholder {
     opacity: 0.6;
     font-size: 15px;
-    top: 50%;
 }
 textarea:focus::placeholder, input:focus::placeholder {
     transition: 0.5s;
@@ -93,6 +102,7 @@ textarea:focus, input:focus {
 #textos {
     margin: 230px auto;
     text-align: center;
+    animation: aparicaoText 1.3s ease;
 }
 #userMensagem {
     height: 200px;
@@ -101,6 +111,7 @@ textarea:focus, input:focus {
     position: absolute;
     top: 15px;
     right: 15px;
+    color: #fcfcfc;
 }
 #bVoltar {
     width: 15px;
@@ -122,4 +133,79 @@ h1 {
 }
 button {
     font-size: 18px;
+}
+#celular {
+    display: none;
+}
+@media (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        transition: 1s;
+    }
+    h3, p {
+        font-size: 15px;
+    }
+    #textos > div > h1 {
+        font-size: 60px;
+    }
+    #dados {
+        display: flex;
+        gap: 15px;      
+        padding-top: 15px;
+        animation: aparicaoCont 1.3s ease;
+    }
+    #contato {
+        background-color: #fcfcfc;
+        border-radius: 100px 100px 0px 0px;
+        height: 100vh;
+        padding-top: 30px;
+    }
+    #apresentacao {
+        display: none;
+    }
+    #contato > h1 {
+        font-size: 35px;
+        animation: aparicaoCont 1.3s ease;
+    }
+    #textos {
+        margin: 0.7%;
+        height: 100px;
+        animation: aparicaoTextMob 1.3s ease;
+    }
+}
+@media (orientation: landscape) {
+    html {
+        overflow: auto;
+    }
+}
+@keyframes aparicaoCont {
+    from {
+        margin: 1cqi;
+        opacity: 0;
+    }
+    to {
+        margin: 0 auto;
+        opacity: 1;
+    }
+}
+@keyframes aparicaoText {
+    from {
+        margin: 37vh;
+        opacity: 0;
+    }
+    to {
+        margin: 31.5vh auto;
+        opacity: 1;
+    }
+}
+@keyframes aparicaoTextMob {
+    from {
+        margin: 4vh;
+        opacity: 0;
+    }
+    to {
+        margin: 0.8vh auto;
+        opacity: 1;
+    }
 }
