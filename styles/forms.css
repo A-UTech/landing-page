@@ -54,7 +54,7 @@ section > form {
     gap: 10px;
 }
 
-input, textarea {
+input, textarea, button{
     border-radius: 10px;
     width: 260px;
     height: 58px;
@@ -62,17 +62,17 @@ input, textarea {
     color: var(--corPreto);
 }
 
-.inputs {
+input, textarea {
     border: 2px solid #1A7B66;
     text-align: left;
     padding-left: 20px;
 }
 
-.inputs::placeholder {
+input::placeholder, textarea {
     color: #bbb;
 }
 
-input.buttons {
+button {
     width: 280px;
     background: var(--corVE);
     color: var(--corBranco);
@@ -88,9 +88,10 @@ input:focus, textarea:focus {
 }
 
 textarea {
+    width: 240px;
     height: 120px;
     resize: none;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 div.mens, div.contactMens {
