@@ -76,6 +76,7 @@ header {
     display: flex;
     align-items: center;
     z-index: 1;
+    transition: 0.5s;
 }
 
 header img {
@@ -333,6 +334,7 @@ footer img {
 @media screen and (min-width: 768px) {
     header p {
         display: none;
+        transition: 1s;
     }
 
     header > ul {
@@ -342,6 +344,7 @@ footer img {
         list-style-type: none;
         gap: 20px;
         align-items: center;
+        transition: 0.5s;
     }
 
 

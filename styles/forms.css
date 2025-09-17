@@ -41,6 +41,8 @@ section {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    transition: 1s;
+    animation: subirMob 1s;
 }
 
 h1 {
@@ -54,7 +56,7 @@ section > form {
     gap: 10px;
 }
 
-input, textarea {
+input, textarea, button{
     border-radius: 10px;
     width: 260px;
     height: 58px;
@@ -62,17 +64,17 @@ input, textarea {
     color: var(--corPreto);
 }
 
-.inputs {
+input, textarea {
     border: 2px solid #1A7B66;
     text-align: left;
     padding-left: 20px;
 }
 
-.inputs::placeholder {
+input::placeholder, textarea::placeholder {
     color: #bbb;
 }
 
-input.buttons {
+button {
     width: 280px;
     background: var(--corVE);
     color: var(--corBranco);
@@ -88,9 +90,10 @@ input:focus, textarea:focus {
 }
 
 textarea {
+    width: 240px;
     height: 120px;
     resize: none;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 div.mens, div.contactMens {
@@ -148,9 +151,6 @@ section p {
 }
 
 
-
-
-
 @media screen and (min-width: 768px) {
     body {
         display: grid;
@@ -163,6 +163,7 @@ section p {
         height: 100vh;
         width: 60vw;
         border-radius: 0 80px 80px 0;
+        animation: subir 1s;
     }
 
     h1 {
@@ -171,6 +172,7 @@ section p {
 
     div.mens {
         display: block;
+        animation: subirMens 1s;
     }
 
     div.mens > div {
@@ -191,5 +193,35 @@ section p {
 
     section.token {
         border-radius: 100px 0 0 100px;
+    }
+}
+@keyframes subir {
+    from {
+        margin-top: 10dvh;
+        opacity: 0;
+    } 
+    to {
+        margin-top: 0dvh;
+        opacity: 1;
+    }
+}
+@keyframes subirMob {
+    from {
+        margin-top: 50dvh;
+        opacity: 0;
+    } 
+    to {
+        margin-top: 15dvh;
+        opacity: 1;
+    }
+}
+@keyframes subirMens {
+    from {
+        margin-top: 40dvh;
+        opacity: 0;
+    } 
+    to {
+        margin-top: 0dvh;
+        opacity: 1;
     }
 }
