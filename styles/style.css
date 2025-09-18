@@ -141,6 +141,8 @@ div#slide01 > section {
     position: absolute;
     bottom: 30px;
     right: 30px;
+    transition: 1s;
+    animation: titulo;
 }
 
 div#slide01 h1 {
@@ -348,6 +350,11 @@ footer img {
     }
 
 
+    div#slide01 section {
+        animation: titulo 1s ease;
+        transform: translateX(20px);
+        transition: 1s;
+    }
 
     div#slide01 img {
         width: 375px;
@@ -401,5 +408,13 @@ footer img {
 
     footer h1 {
         color: var(--corBranco);
+    }
+}
+@keyframes titulo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
