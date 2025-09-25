@@ -9,20 +9,21 @@
 </head>
 <body>
     <section>
-        <h1>Login de empresa</h1>
+        <h1>Criar conta</h1>
         <form method="post">
-            <input type="email" name="email" placeholder="E-mail" required minlength="10" autocomplete="email" autofocus>
-            <input type="password" name="password" placeholder="Senha" required minlength="8" autocomplete="current-password">
+            <input type="text" name="name" placeholder="Nome" required autofocus>
+            <input type="email" name="email" placeholder="E-mail" required minlength="10" autocomplete="email">
+            <input type="tel" name="telephone" placeholder="Telefone" required minlength="11" maxlength="13">
+            <input type="text" name="cnpj" placeholder="CNPJ" required minlength="14" maxlength="18" pattern="^[0-9]{2}[\. \-\/]*[0-9]{3}[\. \-\/]*[0-9]{3}[\. \-\/]*[0-9]{4}[\. \-\/]*[0-9]{2}$">
             <a href="forms-login_token.html"><button type="submit">Entrar</button></a>
         </form>
-        <div id="registerLogin"><label for="">Ainda não possui cadastro?</label><a href="forms-register.html"><button id="buttonRegister">Cadastre-se</button></a></div>
     </section>
     <div class="mens">
         <h2>Olá</h2>
-        <p>seja bem vindo novamente!</p>
+        <p>seja bem vindo!</p>
     </div>
     <div class="back">
-        <a href="../index.html">
+        <a href="forms-login_cmp.html">
             <img src="../assets/icons/arrow-left.png">
             <p>Voltar</p>
         </a>

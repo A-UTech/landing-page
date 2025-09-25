@@ -36,7 +36,23 @@ input {
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/splash.png);
+}
+
+section {
     background-color: var(--corPreto);
+    animation: iniciar 0.8s;
+}
+
+body > a {
+    position: absolute;
+    z-index: 1;
+    left: 90vw;
+    top: 20px;
+    font-size: 2.3em;
+    animation: desaparecer 3s;
 }
 
 /* -- main config ------------------ */
@@ -66,4 +82,32 @@ main li {
 main p{
     font-weight: bold;
     font-size: 3em;
+}
+
+@keyframes iniciar {
+    from {
+        border-radius: 1000px;
+        position: absolute;
+        width: 5%;
+        height: 5%;
+        top: 0;
+        left: 100vw;
+        background-color: var(--corBranco);
+    }
+    to {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--corPreto);
+    }
+}
+@keyframes desaparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

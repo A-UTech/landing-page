@@ -80,6 +80,30 @@ button {
     color: var(--corBranco);
 }
 
+#buttonRegister {
+    border: 2px solid var(--corPreto);
+    border-radius: 100px;
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+}
+
+#registerLogin {
+    top: 670px;
+    margin: auto;
+    position: absolute;
+}
+
+#registerLogin > label,
+#registerLogin > a button {
+    color: var(--corPreto);
+    text-decoration: none;
+}
+
+#registerLogin > label {
+    margin-right: 10px;
+}
+
 input:hover, textarea:hover {
     box-shadow: 0 0 3px .15vw rgba(0, 0, 0, 0.3);
 }
@@ -119,24 +143,38 @@ div.back > a > img {
 
 /* --- token ------ */
 
-section.token {
-    border-radius: 50px 50px 0 0;
+.token > input, .token > button{
+    border-radius: 10px;
+    height: 60px;
+    transition: 500ms;
 }
 
-form.token {
-    display: flex;
-    flex-direction: column;
-}
-
-form.token input.inputs{
-    width: 50px;
-    height: 50px;
-    padding: 0;
+.token > div > input {
+    width: 60px;
     text-align: center;
+    font-size: 25px;
+    padding: 0;
+    color: var(--corPreto);
 }
 
-div.token {
+.token > button {
+    margin: auto;
+}
+
+.tokenBack {
+    position: absolute;
     left: 15px;
+    top: 10px;
+}
+
+.tokenBack > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tokenBack > a > img {
+    height: 100%;
 }
 
 input::-webkit-outer-spin-button,
