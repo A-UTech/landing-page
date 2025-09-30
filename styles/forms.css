@@ -74,6 +74,10 @@ input::placeholder, textarea::placeholder {
     color: #bbb;
 }
 
+input[name="nome"] {
+    text-transform: capitalize;
+}
+
 button {
     width: 280px;
     background: var(--corVE);
@@ -233,6 +237,7 @@ section p {
         border-radius: 100px 0 0 100px;
     }
 }
+
 @keyframes subir {
     from {
         margin-top: 10dvh;
