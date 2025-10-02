@@ -47,7 +47,7 @@ p > a, li > a {
     position: relative;
 }
   
-p > a::before, li > a::before {
+a.linkAnimation::before {
       content: '';
       position: absolute;
       width: 100%;
@@ -159,8 +159,8 @@ div#slide01 img{
 
 div#slide01 > section {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 50px;
+    right: 60px;
     transition: 0.5s;
     animation: tituloSec 1.5s;
 }
@@ -203,8 +203,9 @@ div#slide02 > p {
 
 div#slide03 .card {
     align-items: center;
-    height: 200px;
-    width: 180px;
+    height: 190px;
+    width: 160px;
+    padding: 5px;
 }
 
 div#slide03 .card > h3,
@@ -312,8 +313,7 @@ div.container {
 footer {
     display: grid;
     grid-template-rows: repeat(1fr, 4);
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     background-color: var(--corCinza);
 }
 
@@ -354,6 +354,10 @@ footer img {
 /* configurações pc */
 
 @media screen and (min-width: 768px) {
+    body {
+        font-size: 1.3em;
+    }
+
     header div {
         display: none;
         transition: 1s;
@@ -389,6 +393,11 @@ footer img {
         margin-top: 90px;
     }
 
+    div#slide03 section.card {
+        width: 230px;
+        height: 250px;
+    }
+
     div#slide05 {
         flex-direction: row;
         justify-content: space-evenly;
@@ -416,7 +425,7 @@ footer img {
     }
 
     div#slide06 > section {
-        width: 300px;
+        width: 350px;
     }
 
     div#slide08 > p{
@@ -425,6 +434,14 @@ footer img {
     }
 
 
+    footer {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    footer > section {
+        width: fit-content;
+    }
 
     footer ul{
         columns: 1;
@@ -434,6 +451,7 @@ footer img {
         color: var(--corBranco);
     }
 }
+
 @keyframes titulo {
     from {
         opacity: 0;
