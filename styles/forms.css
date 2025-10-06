@@ -78,6 +78,13 @@ input[name="nome"] {
     text-transform: capitalize;
 }
 
+input:valid {
+    color: var(--corVE);
+}
+input:invalid {
+    color: rgb(255, 0, 0);
+}
+
 button {
     width: 280px;
     background: var(--corVE);
