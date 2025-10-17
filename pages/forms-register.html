@@ -13,8 +13,7 @@
         <form method="post">
             <input type="text" name="name" placeholder="Nome" required autofocus pattern="^[A-Z][a-z '-]*$" title="Caso o sistema não permita seu nome original, faça cadastro com outro nome, depois entre em contato conosco">
             <input type="email" name="email" placeholder="E-mail" required minlength="10" autocomplete="email" pattern="^[a-zA-Z0-9_\.\-]{1,}@[a-zA-Z_\.\-]{2,}\.(com|br|org|me)$" title="Coloque um dominio .com, ou .br, ou .org, ou .me">
-            <input type="tel" name="telephone" placeholder="Telefone" required minlength="11" maxlength="16" pattern="^[\(]?[0-9]{2}[\)]? ?[0-9]{5}[\- ]?[0-9]{4}" title="Coloque seu DDD e logo em seguida seu número. Ex:(99) 12345-6789">
-            <input type="text" name="cnpj" placeholder="CNPJ" required minlength="14" maxlength="14" pattern="^[0-9]{14}$" title="Digite apenas os números">
+            <input type="text" name="cnpj" placeholder="CNPJ" required minlength="14" maxlength="18" pattern="^[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}/?[0-9]{4}-?[0-9]{2}$" title="Digite apenas os números">
             <input type="text" name="unitArea" placeholder="Unidade da empresa" required autofocus pattern="^[A-Za-z0-9 '\-]{2,}" title="Coloque o nome da unidade da empresa">
             <input type="text" list="estados" name="states" placeholder="Estado" required autofocus pattern="^(AC|AP|AM|PA|RO|RR|TO|AL|BA|CE|MA|PB|PE|PI|RN|SE|GO|MT|MS|DF|ES|MG|RJ|SP|PR|RS|SC)$" title="Coloque a sigla do estado do Brasil onde está a empresa. Ex: SP">
             <datalist name="estados" id="estados">

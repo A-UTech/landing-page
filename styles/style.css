@@ -42,6 +42,9 @@ input {
     cursor: pointer;
 }
 
+#slide02 > p {
+    font-size: 2vmax;
+}
 
 p > a, li > a {
     position: relative;
