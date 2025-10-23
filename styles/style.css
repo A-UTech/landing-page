@@ -42,10 +42,6 @@ input {
     cursor: pointer;
 }
 
-#slide02 > p {
-    font-size: 2vmax;
-}
-
 p > a, li > a {
     position: relative;
 }
@@ -200,6 +196,8 @@ div#slide02 h2 {
 div#slide02 > p {
     width: 300px;
     margin-top: -60px;
+    font-size: 1.2em;
+    transition: 0.5s;
 }
 
 
@@ -208,7 +206,9 @@ div#slide03 .card {
     align-items: center;
     height: 190px;
     width: 160px;
-    padding: 5px;
+}
+div#slide03 .container {
+    gap: 10px;
 }
 
 div#slide03 .card > h3,
@@ -219,29 +219,105 @@ div#slide03 .card > p{
 
 
 div#slide04 {
-    background: var(--corCinza);
     flex-direction: column;
     justify-content: space-evenly;
+    transition: 0.1s;
 }
-
 div#slide04 > h2 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
-
-div#slide04 > img {
-    width: 100%;
-    max-width: 600px;
+div#slide04 > #topicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    column-gap: 20px;
+    width: 80dvw;
 }
-
-
+div#slide04 > #topicos > a {
+    background-color: var(--corCinza);
+    border-radius: 50px;
+    height: 30px;
+    gap: 10px;
+    width: 96.8%;
+    display: flex;
+    padding: 5px;
+}
+div#slide04 > #topicos > a > p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto;
+    height: 20px;
+    margin-top: -1px;
+}
+div#slide04 > #topicos > a > img {
+    margin-top: 5px;
+    margin-left: 6px;
+}
+.objetivos {
+    width: 80dvw;
+    background-color: var(--corCinza);
+    display: none;
+    border-radius: 5px;
+    padding-bottom: 3px;
+}
+.objetivos > h3 {
+    padding: 20px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+.objetivos > section > p {
+    text-align: center;
+    margin-top: 20px;
+}
+.objetivos > section > img {
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    transition: 0.2s;
+}
+.objetivos > section {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+}
+#decisoesCard:target {
+    display: block;
+}
+#acessoCard:target {
+    display: block;
+}
+#eficienciaCard:target {
+    display: block;
+}
+#agilidadeCard:target {
+    display: block;
+}
 
 div#slide05{
     text-align: center;
     flex-direction: column;
     gap: 50px;
 }
-
-
+div#slide05 > .container > .card {
+    font-size: 18px;
+    padding: 1dvw;
+}
+div#slide05 > #proposta {
+    text-align: right;
+    position: relative;
+    top: 45px;
+}
+div#slide05 > #proposta > label > p {
+    font-size: 25px;
+}
+div#slide05 > #proposta > label > a > button {
+    background-color: transparent;
+    color: var(--corBranco);
+    border: 2px solid var(--corBranco);
+}
 
 div#slide06 {
     flex-direction: column-reverse;
@@ -273,12 +349,13 @@ div#slide07 > img {
 
 
 div#slide08 {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
+    transition: 0.5s;
 }
 
 div#slide08 p {
-    width: 300px;
+    width: 400px;
 }
 
 
@@ -304,6 +381,7 @@ div.container {
     transition: 0.4s ease-in-out;
     position: relative;
     left: 0;
+    padding: 18px;
 }
 
 .card:hover {
@@ -314,6 +392,7 @@ div.container {
 
 
 footer {
+    height: 57vh;
     display: grid;
     grid-template-rows: repeat(1fr, 4);
     place-items: center;
@@ -322,7 +401,6 @@ footer {
 
 footer h1{
     color: var(--corCinza);
-    margin-top: 100px;
 }
 
 footer h1, footer p {
@@ -356,7 +434,7 @@ footer img {
 
 /* configurações pc */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 770px) {
     body {
         font-size: 1.3em;
     }
@@ -394,11 +472,38 @@ footer img {
 
     div#slide02 > p {
         margin-top: 90px;
+        font-size: 1.4em;
+        transition: 0.5s;
     }
 
     div#slide03 section.card {
         width: 230px;
         height: 250px;
+    }
+
+    div#slide04 {
+        transition: 0.1s;
+    }
+    .objetivos {
+        width: 70dvw;
+    }
+    .objetivos > section {
+        flex-direction: row;
+    }
+    .objetivos > section > img {
+        width: 41cqmax;
+        height: 250px;
+        transition: 0.2s;
+    }
+    .objetivos > section > p {
+        transition: 0.5s;
+    }
+    #topicos {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+    }
+    #topicos > a {
+        width: 96%;
     }
 
     div#slide05 {
@@ -409,6 +514,7 @@ footer img {
     div#slide05 .card{
         height: 200px;
         width: 180px;
+        padding: 1dvw;
     }
 
     div#slide05 .card:hover ~ .card {
@@ -425,6 +531,7 @@ footer img {
         justify-content: space-evenly;
         flex-wrap: nowrap;
         flex-direction: row;
+        gap: 10px;
     }
 
     div#slide06 > section {
@@ -432,8 +539,9 @@ footer img {
     }
 
     div#slide08 > p{
-        font-size: 1.5em;
+        font-size: 1.2em;
         width: 100%;
+        transition: 0.5s;
     }
 
 
