@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IGesta, o seu app de Análise de Dados inteligente">
+    <link rel="stylesheet" href="styles/styleOld.css">
     <link rel="shortcut icon" href="assets/logos/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
     <title>IGesta</title>
 </head>
 <body>
-    <input type="checkbox" id="chatToggle" hidden>
-    <label for="chatToggle" class="chat-button"><img src="assets/logos/igestinha-outlined.png"></label>
-    <div class="chat-box"><iframe src="pages/mb-chatbot.html"></iframe></div>
-
     <header>
         <section>
             <img src="assets/logos/logo-branca.png">
             <h1>IGesta</h1>
         </section>
-        <a href="pages/mb-header.html"><p>≡</p></a>
+        <a href="pages/mb-header.html"><div><p>≡</p></div></a>
         <ul class="links">
             <li><a href="#slide01" class="linkAnimation">Início</a></li>
             <li><a href="#slide06" class="linkAnimation">Empresa</a></li>
             <li><a href="#slide05" class="linkAnimation">Mensalidades</a></li>
+            <li><a href="pages/mb-chatbot.html" class="linkAnimation">Chatbot</a></li>
             <li><a href="pages/forms-login_cmp.html"><button>Entrar</button></a></li>
         </ul>
     </header>
+
+
 
     <main>
         <div class="slides" id="slide01">
@@ -35,15 +35,17 @@
             </section>
         </div>
 
+        
 
         <div class="slides" id="slide02">
-            <section>
+            <section id="phrases">
                 <h2>INOVAÇÃO</h2>
                 <h2>GESTÃO</h2>
                 <h2>EVOLUÇÃO</h2>
             </section>
             <p>IGesta é uma solução inteligente que simplifica processos, automatiza a contagem e transforma dados em análises claras para otimizar a gestão nas indústrias alimentícias.</p>
         </div>
+
 
 
         <div class="slides" id="slide03">
@@ -68,49 +70,60 @@
         </div>
 
 
-        <div class="slides" id="slide04">
-            <menu>
-                <h2>Nossos objetivos</h2>
-                <section>
-                    <a href="#obj01"><img src="assets/icons/circle.png"><p>Decisões</p></a>
-                    <a href="#obj02"><img src="assets/icons/circle.png"><p>Acesso</p></a>
-                    <a href="#obj03"><img src="assets/icons/circle.png"><p>Eficiência</p></a>
-                    <a href="#obj04"><img src="assets/icons/circle.png"><p>Agilidade</p></a>
-                </section>
-            </menu>
 
-            <div class="objectives" id="obj01">
+        <div class="slides" id="slide04">
+            <h2>Nossos objetivos</h2>
+            <div id="topicos">
+                <a href="#decisoesCard" id="decisoesButton">
+                    <img src="assets/images/topico.png" alt="" width="20px" height="20px">
+                    <p>Decisões</p>
+                </a>
+                <a href="#acessoCard" id="acessoButton">
+                    <img src="assets/images/topico.png" alt="" width="20px" height="20px">
+                    <p>Acesso</p>
+                </a>
+                <a href="#eficienciaCard" id="eficienciaButton">
+                    <img src="assets/images/topico.png" alt="" width="20px" height="20px">
+                    <p>Eficiência</p>
+                </a>
+                <a href="#agilidadeCard" id="agilidadeButton">
+                    <img src="assets/images/topico.png" alt="" width="20px" height="20px">
+                    <p>Agilidade</p>
+                </a>
+            </div>
+
+            
+            <div class="objetivos" id="decisoesCard">
                 <h3>Melhorar a tomada de decisões</h3>
                 <section>
                     <img src="assets/images/objectives01.png">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem, voluptate minima! Provident suscipit quasi itaque nihil atque!</p>
                 </section>
             </div>
-
-            <div class="objectives" id="obj02">
+            <div class="objetivos" id="acessoCard">
                 <h3>Maior acesso aos dados</h3>
                 <section>
                     <img src="assets/images/objectives02.png">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem, voluptate minima! Provident suscipit quasi itaque nihil atque!</p>
                 </section>
             </div>
-
-            <div class="objectives" id="obj03">
+            <div class="objetivos" id="eficienciaCard">
+                
                 <h3>Análise mais eficiente dos dados</h3>
                 <section>
                     <img src="assets/images/objectives03.png">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem, voluptate minima! Provident suscipit quasi itaque nihil atque!</p>
                 </section>
             </div>
-
-            <div class="objectives" id="obj04">
+            <div class="objetivos" id="agilidadeCard">
                 <h3>Facilidade e agilidade no chão da fábrica</h3>
                 <section>
                     <img src="assets/images/objectives04.png">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum laudantium a consequuntur id optio nobis molestiae recusandae quidem iste accusantium, dolorem, voluptate minima! Provident suscipit quasi itaque nihil atque!</p>
                 </section>
             </div>
         </div>
+
 
 
         <div class="slides" id="slide05">
@@ -142,28 +155,45 @@
                     <p>R$400</p>
                 </section>
             </div>
-            <a href="pages/forms-propose.html">Não gostou? Faça uma proposta!</a>
+            <div id="proposta">
+                <label>
+                    <p>Faça seu plano</p>
+                    <a href="pages/forms-propose.html"><button>Proposta</button></a>
+                </label>
+            </div>
         </div>
+
 
 
         <div class="slides" id="slide06">
-            <img src="assets/images/team.png">
+            <img src="assets/images/team-pc.png">
             <section>
                 <h2>Quem somos nós</h2>
-                <p>Somos 14 estudantes da Germinare Tech e unimos nossas ideias para criar um projeto voltado ao ODS 9 (Indústria, Inovação e Infraestrutura). Nosso objetivo é desenvolver um aplicativo que auxilie as indústrias a se modernizarem, crescerem de forma sustentável e se tornarem mais competitivas, impulsionando a inovação e o desenvolvimento tecnológico.</p>
+                <p>Somos 14 estudantes da Germinare Tech e unimos nossas ideias para criar um projeto voltado ao ODS 9 (Indústria, Inovação e Infraestrutura). Nosso objetivo é desenvolver um aplicativo que auxilie as indústrias a se modernizarem, crescerem de forma sustentável e se tornarem mais competitivas, impulsionando a inovação e o desenvolvimento tecnológico.</p>
             </section>
         </div>
 
-        
+
+
         <div class="slides" id="slide07">
             <img src="assets/images/timeline.png">
         </div>
 
 
+
         <div class="slides" id="slide08">
-        <p>A tecnologia que transforma dados em decisões</p>
+        </div>
+
+        
+
         <footer>
-            <h1>IGesta</h1>
+            <p id="phrase">A tecnologia que transforma dados em decisões</p>
+
+            <section>
+                <h1>IGesta</h1>
+                <p>Tecnologia que transforma<br>Dados em Decisões</p>
+            </section>
+
             <section class="links">
                 <h3>Links</h3>
                 <ul>
@@ -171,19 +201,18 @@
                     <li><a href="#slide05" class="linkAnimation">Mensalidades</a></li>
                     <li><a href="pages/updates.html" class="linkAnimation">Atualizações</a></li>
                     <li><a href="pages/forms-contact.html" class="linkAnimation">Contato</a></li>
-                    <li><a href="pages/forms-login_adm.html" class="linkAnimation">Área restrita</a></li>
+                    <li><a href="pages/forms-login_adm.html">Área restrita</a></li>
                 </ul>
             </section>
-            
+
             <section>
                 <h3>Conecte-se</h3>
-                <a title="Facebook" href="https://www.facebook.com/profile.php?id=61576575636670" target="_blank"><img src="assets/icons/socialmedia-facebook.png"></a>
-                <a title="Instagram" href="https://www.instagram.com/igesta.app/" target="_blank"><img src="assets/icons/socialmedia-instagram.png"></a>
-                <a title="LinkedIn" href="https://www.linkedin.com/in/aeu-tech/" target="_blank"><img src="assets/icons/socialmedia-linkedin.png"></a>
-                <a title="YouTube" href="https://www.youtube.com/@aeutech" target="_blank"><img src="assets/icons/socialmedia-youtube.png"></a>
+                <abbr title="Facebook"><a href="https://www.facebook.com/profile.php?id=61576575636670" target="_blank"><img src="assets/icons/socialmedia-facebook.png"></a></abbr>
+                <abbr title="Instagram"><a href="https://www.instagram.com/igesta.app/" target="_blank"><img src="assets/icons/socialmedia-instagram.png"></a></abbr>
+                <abbr title="LinkedIn"><a href="https://www.linkedin.com/in/aeu-tech/" target="_blank"><img src="assets/icons/socialmedia-linkedin.png"></a></abbr>
+                <abbr title="YouTube"><a href="https://www.youtube.com/@aeutech" target="_blank"><img src="assets/icons/socialmedia-youtube.png"></a></abbr>
             </section>
-        </footer>        
-        </div>
+        </footer>
     </main>
 </body>
 </html>

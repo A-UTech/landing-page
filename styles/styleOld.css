@@ -18,17 +18,20 @@
     margin: 0;
     padding: 0;
 
-    font: 1em var(--fontText);
+    font: 0.95em var(--fontText);
     color: var(--corBranco);
     text-decoration: none;
     border: 0;
     scroll-behavior: smooth;
 }
 
-body {background: var(--corPreto)}
+body {
+    background: var(--corPreto);
+}
 
-h1 {font: 5rem var(--fontTitle)}
-h2 {font: 2.5rem var(--fontTitle)}
+h1, h2 {
+    font: 3em var(--fontTitle);
+}
 
 input {
     background: var(--corVC);
@@ -39,7 +42,9 @@ input {
     cursor: pointer;
 }
 
-p > a, li > a {position: relative}
+p > a, li > a {
+    position: relative;
+}
   
 a.linkAnimation::before {
       content: '';
@@ -61,40 +66,11 @@ p > a:hover::before, li > a:hover::before {
 }
 
 
-/* main config */
-iframe {
-    position: absolute;
-    bottom: 110px;
-    left: 20px;
-    z-index: 20;
-    width: 300px;
-    height: 500px;
-    border-radius: 15px;
-    display: none;
-}
-
-body > label {
-    background: var(--corVE);
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    padding: 15px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-}
-
-body label img {width: 40px}
-
-:has(#chatToggle:checked) iframe {display: block}
-
+/* --- main config -------------- */
 
 header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     padding: 18px 20px;
     display: flex;
     align-items: center;
@@ -109,13 +85,12 @@ header img {
 
 header > section {
     display: flex;
-    align-items: center;
     animation: titulo 1.5s;
     transition: 1s;
-    gap: 20px;
 }
 
 header h1 {
+    margin-left: 15px;
     font: bold 3em var(--fontText);
 }
 
@@ -123,7 +98,7 @@ header > ul {
     display: none;
 }
 
-header p {
+header div {
     font-size: 3.5em;
     position: absolute;
     top: 15px;
@@ -133,7 +108,7 @@ header p {
     text-align: center;
 }
 
-header p:hover {
+header div:hover {
     position: absolute;
     background-color: var(--corCinza);
     border-radius: 100px;
@@ -148,26 +123,25 @@ button {
     width: 100px;
 }
 
-
-
 main {
-    height: 100dvh;
+    height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
 
 div.slides, footer {
-    height: 100dvh;
+    height: 100vh;
     width: 100vw;
     scroll-snap-align: start;
     position: relative;
 }
 
-div#slide02, div#slide03, div.container, div#slide04, div#slide05, div#slide06, .card {
+div#slide02, div#slide03, div.container, div#slide04, div#slide05, div#slide06, div#slide08, .card {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 
 div#slide01 {
@@ -184,65 +158,216 @@ div#slide01 img{
 
 div#slide01 > section {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 50px;
+    right: 60px;
     transition: 0.5s;
     animation: tituloSec 1.5s;
 }
 
 div#slide01 h1 {
-    font-size: 7em;
+    font-size: 7.5em;
     margin-bottom: -20px;
     letter-spacing: 3px;
 }
 
 div#slide01 p {
+    font-size: 1.2em;
     letter-spacing: 2px;
 }
 
 
+
 div#slide02 {
-    width: 95vw;
+    width: 90vw;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div#slide02 > section#phrases {
+    font-size: 2em;
+    margin-top: 70px;
+}
+
+div#slide02 h2 {
+    margin-bottom: -15px;
 }
 
 div#slide02 > p {
     width: 300px;
+    margin-top: -60px;
+    font-size: 1.2em;
     transition: 0.5s;
 }
 
-div#slide02 > section {
-    padding-top: 60px;
-}
 
-div#slide02 h2 {
-    font-size: 4em;
-}
-
-
-div#slide03 {
-    gap: 20px;
-    font-size: 0.9rem;
-}
 
 div#slide03 .card {
     align-items: center;
     height: 190px;
-    width: 140px;
-    padding: 5px;
+    width: 160px;
+}
+div#slide03 .container {
+    gap: 10px;
 }
 
-div#slide03 .card > h3, div#slide03 .card > p {width: 130px}
+div#slide03 .card > h3,
+div#slide03 .card > p{
+    width: 150px;
+}
+
+
+
+div#slide04 {
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: 0.1s;
+}
+div#slide04 > h2 {
+    margin-top: 50px;
+}
+div#slide04 > #topicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    column-gap: 20px;
+    width: 80dvw;
+}
+div#slide04 > #topicos > a {
+    background-color: var(--corCinza);
+    border-radius: 50px;
+    height: 30px;
+    gap: 10px;
+    width: 96.8%;
+    display: flex;
+    padding: 5px;
+}
+div#slide04 > #topicos > a > p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto;
+    height: 20px;
+    margin-top: -1px;
+}
+div#slide04 > #topicos > a > img {
+    margin-top: 5px;
+    margin-left: 6px;
+}
+.objetivos {
+    width: 80dvw;
+    background-color: var(--corCinza);
+    display: none;
+    border-radius: 5px;
+    padding-bottom: 3px;
+}
+.objetivos > h3 {
+    padding: 20px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+.objetivos > section > p {
+    text-align: center;
+    margin-top: 20px;
+}
+.objetivos > section > img {
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    transition: 0.2s;
+}
+.objetivos > section {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+}
+#decisoesCard:target {
+    display: block;
+}
+#acessoCard:target {
+    display: block;
+}
+#eficienciaCard:target {
+    display: block;
+}
+#agilidadeCard:target {
+    display: block;
+}
+
+div#slide05{
+    text-align: center;
+    flex-direction: column;
+    gap: 50px;
+}
+div#slide05 > .container > .card {
+    font-size: 18px;
+    padding: 1dvw;
+}
+div#slide05 > #proposta {
+    text-align: right;
+    position: relative;
+    top: 45px;
+}
+div#slide05 > #proposta > label > p {
+    font-size: 25px;
+}
+div#slide05 > #proposta > label > a > button {
+    background-color: transparent;
+    color: var(--corBranco);
+    border: 2px solid var(--corBranco);
+}
+
+div#slide06 {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+div#slide06 > section{
+    width: 90vw;
+}
+
+div#slide06 > img{
+    margin-top: 45px;
+    width: 90vw;
+    max-width: 500px;
+}
+
+
+
+div#slide07 {
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+div#slide07 > img {
+    height: 60vh;
+}
+
+
+
+div#slide08 {
+    font-size: 2em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+div#slide08 p {
+    width: 400px;
+}
+
 
 
 div.container {
-    display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
 }
 
-.card h3 {font-weight: bold}
+.card h3 {
+    font-weight: bold;
+}
 
 .card {   
     height: 160px;
@@ -256,6 +381,7 @@ div.container {
     transition: 0.4s ease-in-out;
     position: relative;
     left: 0;
+    padding: 18px;
 }
 
 .card:hover {
@@ -264,149 +390,55 @@ div.container {
 }
 
 
-div#slide04 {
-    text-align: center;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-div#slide04 h2 {margin-top: 80px}
-div#slide04 h3 {font-weight: bold}
-
-div#slide04 > menu {
-    display: flex;
-    flex-direction: column;
-}
-
-div#slide04 > menu section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-div#slide04 > menu section > a {
-    box-sizing: border-box;
-    width: 150px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--corCinza);
-    padding: 10px 20px;
-    border-radius: 50px;
-}
-
-div#slide04 > menu section img {
-    width: 25px;
-    height: 25px;
-}
-
-div.objectives {
-    box-sizing: border-box;
-    width: fit-content;
-    padding: 20px;
-    display: none;
-    border-radius: 10px;
-}
-
-div.objectives img {
-    width: 90vw;
-    max-width: 500px;
-}
-
-div.objectives p {
-    width: 100%;
-    font-size: 0.9rem;
-    text-align: left;
-    margin: 0 auto;
-}
-
-div#obj01:target {display: block}
-div#obj02:target {display: block}
-div#obj03:target {display: block}
-div#obj04:target {display: block}
-
-
-div#slide05{
-    text-align: center;
-    flex-direction: column;
-    gap: 50px;
-}
-
-div#slide05 > a {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 50px;
-    border: 1px solid var(--corBranco);
-    padding: 10px 20px;
-}
-
-
-div#slide06 {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    font-size: 0.95rem;
-}
-
-div#slide06 h2 {padding-top: 60px}
-
-div#slide06 > section {width: 90vw}
-
-div#slide06 > img{
-    margin-top: 45px;
-    width: 90vw;
-    max-width: 500px;
-}
-
-
-div#slide07 {
-    display: flex;
-    align-items: center;
-    overflow-y: scroll;
-    padding-top: 10px;
-}
-
-div#slide07 > img {height: 60dvh}
-
-
-div#slide08 > p {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    text-align: center;
-}
-
 
 footer {
+    height: 57vh;
     display: grid;
     grid-template-rows: repeat(1fr, 4);
     place-items: center;
+    background-color: var(--corCinza);
+}
+
+footer > p#phrase {
+    
 }
 
 footer h1{
-    opacity: 0;
-    margin-top: 100px;
+    color: var(--corCinza);
 }
 
-footer h1, footer p {text-align: center}
+footer h1, footer p {
+    text-align: center;
+}
 
 footer ul {
     list-style: none;
     columns: 2;
-    gap: 50px;
 }
 
-footer ul a {color: #bbbbbb}
-footer ul li, footer h3 {margin-bottom: 10px}
-footer h3 {font-weight: bold}
-footer img {width: 50px}
+footer ul a {
+    color: #bbbbbb;
+}
+
+footer ul li, footer h3 {
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    font-weight: bold;
+}
+
+footer img {
+    width: 50px;
+}
 
 
-@media screen and (min-width: 768px) {
-    body {font-size: 1.1rem;}
-    h1, h2 {font-size: 3.5rem}
+/* configurações pc */
+
+@media screen and (min-width: 770px) {
+    body {
+        font-size: 1.3em;
+    }
 
     header p {
         display: none;
@@ -428,13 +460,10 @@ footer img {width: 50px}
         transition: 1s;
     }
 
-
     div#slide01 section {
         animation: titulo 1.5s;
         transform: translateX(20px);
         transition: 0.5s;
-        bottom: 50px;
-        right: 50px;
     }
 
     div#slide01 img {
@@ -442,40 +471,51 @@ footer img {width: 50px}
         left: 25vw;
     }
 
-    div#slide02 {justify-content: space-evenly}
-
-    div#slide02 h2 {font-size: 5em}
-
     div#slide02 > p {
+        margin-top: 90px;
+        font-size: 1.4em;
         transition: 0.5s;
-        width: 400px;
     }
-
 
     div#slide03 section.card {
         width: 230px;
         height: 250px;
     }
 
-    
-    div.objectives {border: 1px solid var(--corBranco)}
-    div.objectives h3 {margin-bottom: 10px}
-    div.objectives p {width: 500px}
-
+    div#slide04 {
+        transition: 0.1s;
+    }
+    .objetivos {
+        width: 70dvw;
+    }
+    .objetivos > section {
+        flex-direction: row;
+    }
+    .objetivos > section > img {
+        width: 41cqmax;
+        height: 250px;
+        transition: 0.2s;
+    }
+    .objetivos > section > p {
+        transition: 0.5s;
+    }
+    #topicos {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+    }
+    #topicos > a {
+        width: 96%;
+    }
 
     div#slide05 {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    div#slide05 div.title > p {
-        margin-top: -15px;
-        margin-bottom: 30px;
-    }
-
     div#slide05 .card{
         height: 200px;
         width: 180px;
+        padding: 1dvw;
     }
 
     div#slide05 .card:hover ~ .card {
@@ -484,41 +524,44 @@ footer img {width: 50px}
         transition: 0.4s ease-out;
     }
 
+    div#slide06.card:not(:first-child) {
+        margin-left: -50px;
+    }
 
     div#slide06 {
         justify-content: space-evenly;
         flex-wrap: nowrap;
         flex-direction: row;
+        gap: 10px;
     }
 
-    div#slide06 > section {width: 400px}
-
-
-    div#slide08 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 20px;
+    div#slide06 > section {
+        width: 350px;
     }
 
-    div#slide08 > p {
-        font-size: 2em;
-        font-weight: bold;
+    div#slide08 > p{
+        font-size: 1.2em;
+        width: 100%;
+        transition: 0.5s;
     }
 
 
     footer {
-        position: absolute;
-        height: fit-content;
-        bottom: 200px;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    footer > section {width: fit-content}
-    footer ul {columns: 1}
-    footer h1 {opacity: 1;}
+    footer > section {
+        width: fit-content;
+    }
+
+    footer ul{
+        columns: 1;
+    }
+
+    footer h1 {
+        color: var(--corBranco);
+    }
 }
 
 @keyframes titulo {
