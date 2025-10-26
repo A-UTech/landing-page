@@ -12,8 +12,8 @@
         <h1>Proposta</h1>
         <form method="post">
             <input type="text" name="name" placeholder="Nome" required autocomplete="name" autofocus>
-            <input type="email" name="email" placeholder="E-Mail" required autocomplete="email" minlength="10" >
-            <input type="text" name="cnpj" placeholder="CNPJ" required minlength="14" maxlength="14" pattern="^[0-9]{14}$" title="Digite apenas os números">
+            <input type="email" name="email" placeholder="E-Mail" required autocomplete="email">
+            <input type="text" name="cnpj" placeholder="CNPJ" required minlength="14" maxlength="14" pattern="^[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}/?[0-9]{4}-?[0-9]{2}$" title="Digite um CNPJ válido">
             <textarea name="message" placeholder="Mensagem"></textarea>
             <button type="submit">Entrar</button>
         </form>
