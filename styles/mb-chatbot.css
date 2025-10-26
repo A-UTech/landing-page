@@ -140,6 +140,11 @@ main {
     margin: 0 5px;
 }
 
+#voltar img {
+    width: 13px;
+    height: 19px; 
+}
+
 #iMensagem {
     flex-grow: 1;
     padding: 12px 18px;
@@ -224,11 +229,6 @@ input::placeholder {
     
     #voltar > a {
         padding: 0 15px;
-    }
-    
-    #voltar img {
-        width: 13px;
-        height: 19px; 
     }
 
     #input-area {
