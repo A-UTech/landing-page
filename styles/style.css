@@ -62,16 +62,6 @@ p > a:hover::before, li > a:hover::before {
 
 
 /* main config */
-iframe {
-    position: absolute;
-    bottom: 110px;
-    left: 20px;
-    z-index: 20;
-    width: 300px;
-    height: 500px;
-    border-radius: 15px;
-    display: none;
-}
 
 body > label {
     background: var(--corVE);
@@ -89,8 +79,24 @@ body > label {
 
 body label img {width: 40px}
 
-:has(#chatToggle:checked) iframe {display: block}
-
+iframe {
+    display: none;
+}
+:has(#chatToggle:checked) iframe {
+    display: block;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    width: 100dvw;
+    height: 100dvh;
+    transition: 0.3s;
+}
+:has(#chatToggle:checked) .chat-button, :has(#chatToggle:checked) #chatToogle {
+    position: absolute;
+    top: 10px;
+    left: 89dvw;
+    transition: 0.7s;
+}
 
 header {
     position: fixed;
@@ -210,6 +216,7 @@ div#slide02 {
 div#slide02 > p {
     width: 300px;
     transition: 0.5s;
+    margin-left: 0px;
 }
 
 div#slide02 > section {
@@ -220,16 +227,20 @@ div#slide02 h2 {
     font-size: 4em;
 }
 
-
 div#slide03 {
     gap: 20px;
     font-size: 0.9rem;
+    flex-direction: column;
+}
+
+div#slide03 > .container {
+    gap: 10px;
 }
 
 div#slide03 .card {
     align-items: center;
     height: 190px;
-    width: 140px;
+    width: 190px;
     padding: 5px;
 }
 
@@ -279,15 +290,17 @@ div#slide04 > menu {
 }
 
 div#slide04 > menu section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    container-type: normal;
 }
 
 div#slide04 > menu section > a {
     box-sizing: border-box;
-    width: 150px;
+    width: 45dvw;
     height: 50px;
     display: flex;
     align-items: center;
@@ -308,11 +321,12 @@ div.objectives {
     padding: 20px;
     display: none;
     border-radius: 10px;
+    width: 70dvw;
 }
 
 div.objectives img {
-    width: 90vw;
-    max-width: 500px;
+    width: 50cqw;
+    height: 20vmax;
 }
 
 div.objectives p {
@@ -341,6 +355,10 @@ div#slide05 > a {
     border-radius: 50px;
     border: 1px solid var(--corBranco);
     padding: 10px 20px;
+}
+
+div#slide05 .card {
+    padding: 3dvw;
 }
 
 
@@ -407,6 +425,22 @@ footer img {width: 50px}
 @media screen and (min-width: 768px) {
     body {font-size: 1.1rem;}
     h1, h2 {font-size: 3.5rem}
+    :has(#chatToggle:checked) iframe {
+        display: block;
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        z-index: 20;
+        width: 300px;
+        height: 500px;
+        border-radius: 15px;
+        transition: 0.7s;
+    }
+    :has(#chatToggle:checked) #chatToggle, :has(#chatToggle:checked) .chat-button {
+        top: 88dvh;
+        left: 20px;
+        transition: 0.7s;
+    }
 
     header p {
         display: none;
@@ -454,13 +488,25 @@ footer img {width: 50px}
 
     div#slide03 section.card {
         width: 230px;
-        height: 250px;
+        height: 230px;
     }
 
-    
+    div#slide04 menu > section {
+        display: flex;
+    }
     div.objectives {border: 1px solid var(--corBranco)}
+    div.objectives > section {
+        display: flex;
+    }
     div.objectives h3 {margin-bottom: 10px}
-    div.objectives p {width: 500px}
+    div.objectives p {
+        width: 500px;
+        margin-top: 0.5dvw;
+        padding: 1dvw;
+    }
+    div#slide04 > menu section > a {
+        width: 20dvw;
+    }
 
 
     div#slide05 {
@@ -475,7 +521,8 @@ footer img {width: 50px}
 
     div#slide05 .card{
         height: 200px;
-        width: 180px;
+        width: 200px;
+        padding: 0;
     }
 
     div#slide05 .card:hover ~ .card {
