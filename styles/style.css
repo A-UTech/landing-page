@@ -94,8 +94,22 @@ iframe {
 :has(#chatToggle:checked) .chat-button, :has(#chatToggle:checked) #chatToogle {
     position: absolute;
     top: 10px;
-    left: 89dvw;
+    left: 88.5dvw;
     transition: 0.7s;
+    width: 65px;
+    padding: 6px;
+}
+:has(#chatToggle:checked) .chat-button > #chat-igestinha {
+    display: none;
+}
+:has(#chatToggle:checked) #backHome {
+    display: flex;
+    gap: 8px;
+}
+#backHome > img {
+    width: 10px;
+    height: 15px;
+    margin-top: 4px;
 }
 
 header {
@@ -437,9 +451,20 @@ footer img {width: 50px}
         transition: 0.7s;
     }
     :has(#chatToggle:checked) #chatToggle, :has(#chatToggle:checked) .chat-button {
-        top: 88dvh;
+        top: 87.7dvh;
         left: 20px;
         transition: 0.7s;
+        width: 40px;
+        padding: 15px;
+    }
+    :has(#chatToggle:checked) .chat-button > #chat-igestinha {
+        display: block;
+    }
+    #backHome {
+        display: none;
+    }
+    :has(#chatToggle:checked) #backHome {
+        display: none;
     }
 
     header p {
