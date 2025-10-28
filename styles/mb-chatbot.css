@@ -255,3 +255,9 @@ input::placeholder {
         font-size: 1em;
     }
 }
+
+@media screen and (width: 300px) {
+    section#voltar {
+        display: none;
+    }
+}
