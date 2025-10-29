@@ -117,8 +117,8 @@ header > ul {
 header p {
     font-size: 3.5em;
     position: absolute;
-    top: 15px;
-    right: 70px;
+    top: 10px;
+    right: 50px;
     transition: 0.6s;
     width: 70px;
     text-align: center;
@@ -224,8 +224,8 @@ div#slide03 > .container {
 
 div#slide03 .card {
     align-items: center;
-    height: 190px;
-    width: 190px;
+    height: 180px;
+    width: 155px;
     padding: 5px;
 }
 
@@ -264,6 +264,7 @@ div#slide04 {
     text-align: center;
     flex-direction: column;
     row-gap: 20px;
+    justify-content: start;
 }
 
 div#slide04 h2 {margin-top: 80px}
@@ -302,16 +303,13 @@ div#slide04 > menu section img {
 
 div.objectives {
     box-sizing: border-box;
-    width: fit-content;
-    padding: 20px;
+    padding: 10px;
     display: none;
     border-radius: 10px;
-    width: 70dvw;
 }
 
 div.objectives img {
-    width: 50cqw;
-    height: 20vmax;
+    width: 95cqw;
 }
 
 div.objectives p {
@@ -363,7 +361,6 @@ div#slide06 > img{
     max-width: 500px;
 }
 
-
 div#slide07 {
     padding-top: 100px;
     height: 175vh;
@@ -372,8 +369,8 @@ div#slide07 {
     align-items: center;
 }
 
-div#slide07 > img {
-    width: 100dvw;
+div#slide07 img {
+    width: 80dvw;
 }
 
 div#slide07 h2 {
@@ -436,9 +433,7 @@ footer img {width: 50px}
     
     :has(#chatToggle:checked) iframe {display: block}
 
-    body > a#linkChat {
-        display: none;
-    }
+    body > a#linkChat {display: none}
 
     header p {
         display: none;
@@ -489,21 +484,25 @@ footer img {width: 50px}
         height: 230px;
     }
 
-    div#slide04 menu > section {
-        display: flex;
+
+    div#slide04 > menu section {display: flex}
+    div#slide04 > menu section a {width: 20dvw}
+
+    div.objectives {
+        border: 1px solid var(--corBranco);
+        height: fit-content;
     }
-    div.objectives {border: 1px solid var(--corBranco)}
-    div.objectives > section {
-        display: flex;
-    }
+
+    div.objectives > section {display: flex}
     div.objectives h3 {margin-bottom: 10px}
+
+    div.objectives img {
+        width: 35cqw;
+    }
     div.objectives p {
         width: 500px;
         margin-top: 0.5dvw;
         padding: 1dvw;
-    }
-    div#slide04 > menu section > a {
-        width: 20dvw;
     }
 
 
@@ -538,10 +537,12 @@ footer img {width: 50px}
 
     div#slide06 > section {width: 400px}
 
- 
-    div#slide07 > img {
+    
+    
+    div#slide07 img {
         width: 75dvw;
     }
+    
 
     div#slide08 {
         display: flex;
