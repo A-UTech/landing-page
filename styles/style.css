@@ -203,6 +203,10 @@ div#slide02 > p {
     transition: 0.5s;
     margin-left: 0px;
 }
+div#slide02 > p > span {
+    color: var(--corVC);
+    animation: verdeBranco 4s infinite;
+}
 
 div#slide02 > section {
     padding-top: 60px;
@@ -389,6 +393,10 @@ div#slide08 > p {
     width: 100%;
     text-align: center;
 }
+div#slide08 > p > span {
+    color: var(--corVC);
+    animation: verdeBranco 4s infinite;
+}
 
 
 footer {
@@ -556,6 +564,9 @@ footer img {width: 50px}
         font-size: 2em;
         font-weight: bold;
     }
+    div#slide08 > p > span {
+        font-weight: bold;
+    }
 
 
     footer {
@@ -589,5 +600,17 @@ footer img {width: 50px}
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes verdeBranco {
+    0% {
+        color: var(--corVC);
+    }
+    50% {
+        color: var(--corBranco);
+    }
+    100% {
+        color: var(--corVC);
     }
 }
