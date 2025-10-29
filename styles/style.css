@@ -61,9 +61,13 @@ p > a:hover::before, li > a:hover::before {
 }
 
 
-/* main config */
+/* main config */ 
 
-body > label {
+iframe {
+    display: none;
+}
+
+body > label, body > a#linkChat {
     background: var(--corVE);
     position: fixed;
     bottom: 20px;
@@ -77,46 +81,7 @@ body > label {
     align-items: center;
 }
 
-body label img {width: 40px}
-
-iframe {
-    display: none;
-}
-:has(#chatToggle:checked) iframe {
-    display: block;
-    left: 0;
-    top: 0;
-    border-radius: 0;
-    width: 100dvw;
-    height: 100dvh;
-    transition: 0.3s;
-}
-:has(#chatToggle:checked) .chat-button, :has(#chatToggle:checked) #chatToogle {
-    position: absolute;
-    top: 10px;
-    left: 85dvw;
-    padding: 0;
-    width: 66px;
-    background-color: transparent;
-}
-:has(#chatToggle:checked) .chat-button > #chat-igestinha {
-    display: none;
-}
-:has(#chatToggle:checked) #backHome {
-    display: flex;
-    gap: 8px;
-}
-#backHome {
-    display: none;
-}
-:has(#chatToggle:checked) body {
-    overflow: hidden;
-}
-#backHome > img {
-    width: 10px;
-    height: 15px;
-    margin-top: 4px;
-}
+body > label img, body > a#linkChat img {width: 40px}
 
 header {
     position: fixed;
@@ -152,8 +117,8 @@ header > ul {
 header p {
     font-size: 3.5em;
     position: absolute;
-    top: 15px;
-    right: 70px;
+    top: 10px;
+    right: 50px;
     transition: 0.6s;
     width: 70px;
     text-align: center;
@@ -259,8 +224,8 @@ div#slide03 > .container {
 
 div#slide03 .card {
     align-items: center;
-    height: 190px;
-    width: 190px;
+    height: 180px;
+    width: 155px;
     padding: 5px;
 }
 
@@ -299,6 +264,7 @@ div#slide04 {
     text-align: center;
     flex-direction: column;
     row-gap: 20px;
+    justify-content: start;
 }
 
 div#slide04 h2 {margin-top: 80px}
@@ -337,16 +303,13 @@ div#slide04 > menu section img {
 
 div.objectives {
     box-sizing: border-box;
-    width: fit-content;
-    padding: 20px;
+    padding: 10px;
     display: none;
     border-radius: 10px;
-    width: 70dvw;
 }
 
 div.objectives img {
-    width: 50cqw;
-    height: 20vmax;
+    width: 95cqw;
 }
 
 div.objectives p {
@@ -398,15 +361,26 @@ div#slide06 > img{
     max-width: 500px;
 }
 
-
 div#slide07 {
+    padding-top: 100px;
+    height: 175vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-    padding-top: 10px;
 }
 
-div#slide07 > img {height: 60dvh}
+div#slide07 img {
+    width: 80dvw;
+}
+
+div#slide07 h2 {
+    text-align: center;
+}
+
+body > label > a img, body > a > img, div#slide07 > img, div#slide01 img {
+    user-select: none;
+    pointer-events: none;
+}
 
 
 div#slide08 > p {
@@ -445,37 +419,21 @@ footer img {width: 50px}
 @media screen and (min-width: 768px) {
     body {font-size: 1.1rem;}
     h1, h2 {font-size: 3.5rem}
-    :has(#chatToggle:checked) iframe {
-        display: block;
+
+    iframe {
         position: absolute;
-        top: 110px;
+        bottom: 100px;
         left: 20px;
         z-index: 20;
         width: 300px;
         height: 500px;
         border-radius: 15px;
-        transition: 0.7s;
-    }
-    :has(#chatToggle:checked) #chatToggle, :has(#chatToggle:checked) .chat-button {
-        top: 87.7dvh;
-        left: 20px;
-        transition: 0.7s;
-        width: 40px;
-        padding: 15px;
-        background-color: var(--corVE);
-    }
-    :has(#chatToggle:checked) .chat-button > #chat-igestinha {
-        display: block;
-    }
-    :has(#chatToggle:checked) body {
-        overflow: auto;
-    }
-    #backHome {
         display: none;
     }
-    :has(#chatToggle:checked) #backHome {
-        display: none;
-    }
+    
+    :has(#chatToggle:checked) iframe {display: block}
+
+    body > a#linkChat {display: none}
 
     header p {
         display: none;
@@ -526,21 +484,25 @@ footer img {width: 50px}
         height: 230px;
     }
 
-    div#slide04 menu > section {
-        display: flex;
+
+    div#slide04 > menu section {display: flex}
+    div#slide04 > menu section a {width: 20dvw}
+
+    div.objectives {
+        border: 1px solid var(--corBranco);
+        height: fit-content;
     }
-    div.objectives {border: 1px solid var(--corBranco)}
-    div.objectives > section {
-        display: flex;
-    }
+
+    div.objectives > section {display: flex}
     div.objectives h3 {margin-bottom: 10px}
+
+    div.objectives img {
+        width: 35cqw;
+    }
     div.objectives p {
         width: 500px;
         margin-top: 0.5dvw;
         padding: 1dvw;
-    }
-    div#slide04 > menu section > a {
-        width: 20dvw;
     }
 
 
@@ -575,6 +537,12 @@ footer img {width: 50px}
 
     div#slide06 > section {width: 400px}
 
+    
+    
+    div#slide07 img {
+        width: 75dvw;
+    }
+    
 
     div#slide08 {
         display: flex;
