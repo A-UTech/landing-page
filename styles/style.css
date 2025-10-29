@@ -218,7 +218,6 @@ div#slide02 h2 {
 
 div#slide03 {
     gap: 20px;
-    font-size: 0.9rem;
     flex-direction: column;
 }
 
@@ -233,7 +232,7 @@ div#slide03 .card {
     padding: 5px;
 }
 
-div#slide03 .card > h3, div#slide03 .card > p {width: 130px}
+div#slide03 .card > h3, div#slide03 .card > p {width: 145px}
 
 
 div.container {
@@ -313,14 +312,13 @@ div.objectives {
 }
 
 div.objectives img {
-    width: 95cqw;
+    width: 70cqw;
 }
 
-div.objectives p {
-    width: 100%;
-    font-size: 0.9rem;
+div.objectives > section > p {
+    width: 90%;
     text-align: left;
-    margin: 0 auto;
+    margin: auto;
 }
 
 div#obj01:target {display: block}
@@ -352,7 +350,6 @@ div#slide05 .card {
 div#slide06 {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    font-size: 0.95rem;
 }
 
 div#slide06 h2 {padding-top: 60px}
@@ -491,7 +488,7 @@ footer img {width: 50px}
         width: 230px;
         height: 230px;
     }
-
+    div#slide03 .card > h3, div#slide03 .card > p {width: 180px}
 
     div#slide04 > menu section {display: flex}
     div#slide04 > menu section a {width: 20dvw}
@@ -507,12 +504,12 @@ footer img {width: 50px}
     div.objectives img {
         width: 35cqw;
     }
-    div.objectives p {
-        width: 500px;
-        margin-top: 0.5dvw;
+    div.objectives > section > p {
+        width: 30cqw;
+        text-align: left;
+        margin: auto;
         padding: 1dvw;
     }
-
 
     div#slide05 {
         flex-direction: row;
@@ -525,14 +522,13 @@ footer img {width: 50px}
     }
 
     div#slide05 .card{
-        height: 200px;
+        height: 230px;
         width: 200px;
         padding: 0;
     }
 
-    div#slide05 .card:hover ~ .card {
-        position: relative;
-        left: 50px;
+    div#slide05 > .container > .card:hover {
+        margin-right: 20px;
         transition: 0.4s ease-out;
     }
 
