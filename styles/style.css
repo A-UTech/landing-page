@@ -40,28 +40,28 @@ input {
 }
 
 p > a, li > a {position: relative}
-  
+
 a.linkAnimation::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      border-radius: 4px;
-      background: #ffffff;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
 }
-  
+
 p > a:hover::before, li > a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
 
 
-/* main config */ 
+/* main config */
 
 iframe {
     display: none;
@@ -243,7 +243,7 @@ div.container {
 
 .card h3 {font-weight: bold}
 
-.card {   
+.card {
     height: 160px;
     width: 140px;
     text-align: center;
@@ -435,7 +435,7 @@ footer img {width: 50px}
         border-radius: 15px;
         display: none;
     }
-    
+
     :has(#chatToggle:checked) iframe {display: block}
 
     body > a#linkChat {display: none}
@@ -498,11 +498,10 @@ footer img {width: 50px}
         height: fit-content;
     }
 
-    div.objectives > section {display: flex}
     div.objectives h3 {margin-bottom: 10px}
 
     div.objectives img {
-        width: 35cqw;
+        width: 30cqw;
     }
     div.objectives > section > p {
         width: 30cqw;
@@ -541,12 +540,12 @@ footer img {width: 50px}
 
     div#slide06 > section {width: 400px}
 
-    
-    
+
+
     div#slide07 img {
         width: 75dvw;
     }
-    
+
 
     div#slide08 {
         display: flex;
@@ -609,4 +608,59 @@ footer img {width: 50px}
     100% {
         color: var(--corVC);
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: var(--corCinza);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    width: 210px;
+    font-size: 14px;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay > a > div {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.overlay > a:hover > div {
+    background-color: #4d4d56;
+}
+
+.conta > img {
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    right: 3px;
+    height: 20px;
+    width: 25px;
+}
+.conta:hover {
+    cursor: pointer;
+}
+button:hover {
+    cursor: pointer;
+}
+
+#buttonPlano:hover {
+    background-color: var(--corVE);
+    transition: 0.5s background-color;
+}
+
+.card.selected {
+    background-color: var(--corVE);
+    color: var(--corPreto);
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
