@@ -384,6 +384,10 @@ body > label > a img, body > a > img, div#slide07 > img, div#slide01 img {
 }
 
 
+div#slide08 {
+    position: relative;
+    top: 45dvh;
+}
 div#slide08 > p {
     position: absolute;
     top: 200px;
